@@ -36,6 +36,9 @@ export default {
       },
       fontSize: {
         badge: '0.625rem' //10px
+      },
+      backgroundImage: {
+        'hero-background': "url('/src/assets/hero-background.svg')"
       }
     },
   },

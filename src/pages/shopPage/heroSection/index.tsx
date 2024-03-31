@@ -5,7 +5,7 @@ import BigCoffe from '../../../assets/big-coffe.svg'
 
 const HeroSection: React.FC = () => {
 	return (
-		<div className='h-[544px] flex items-center'>
+		<div className='h-[544px] flex items-center bg-hero-background'>
 			<BaseContentWrapper className='flex'>
 				<div className='w-[588px] flex flex-col gap-4'>
 					<h1 className='font-baloo2 font-extrabold text-5xl text-baseTitle'>Encontre o café perfeito para qualquer hora do dia</h1>
