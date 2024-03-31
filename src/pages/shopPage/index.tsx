@@ -1,6 +1,6 @@
 import Navbar from "../../components/navbar"
 import PageWrapper from "../../components/ui/pageWrapper"
-import HeroSection from "./components/heroSection"
+import HeroSection from "./heroSection"
 
 const ShopPage: React.FC = () => {
 	return (
