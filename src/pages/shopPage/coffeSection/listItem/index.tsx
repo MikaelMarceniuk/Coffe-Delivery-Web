@@ -1,7 +1,7 @@
 import { useState } from "react"
 import { Minus, Plus, ShoppingCartSimple } from "@phosphor-icons/react"
-import ICoffe from "../../../interface/ICoffe"
-import Button from "../../../components/ui/button"
+import ICoffe from "../../../../interface/ICoffe"
+import Button from "../../../../components/ui/button"
 
 const CoffeListItem: React.FC<ICoffe> = (coffe) => {
 	const [coffeQtd, setCoffeQtd] = useState(1)
