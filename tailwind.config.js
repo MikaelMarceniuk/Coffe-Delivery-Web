@@ -30,6 +30,12 @@ export default {
       fontFamily: {
         baloo2: ["'Baloo 2'"],
         roboto: ['Roboto']
+      },
+      borderRadius: {
+        card36px: '36px',
+      },
+      fontSize: {
+        badge: '0.625rem' //10px
       }
     },
   },
