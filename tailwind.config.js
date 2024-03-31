@@ -28,7 +28,7 @@ export default {
         white: '#FFF'
       },
       fontFamily: {
-        baloo2: ['Baloo2'],
+        baloo2: ["'Baloo 2'"],
         roboto: ['Roboto']
       }
     },

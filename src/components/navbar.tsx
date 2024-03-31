@@ -1,11 +1,12 @@
 import { MapPin, ShoppingCartSimple } from '@phosphor-icons/react'
 import logoSvg from '../assets/Logo.svg'
 import Button from './ui/button'
+import BaseContentWrapper from './ui/baseContentWrapper'
 
 const Navbar: React.FC = () => {
 	return (
 		<div className='h-28 flex items-center'>
-			<div className='mr-40 ml-40 flex flex-1 items-center justify-between'>
+			<BaseContentWrapper className='flex flex-1 items-center justify-between'>
 				<div>
 					<img src={logoSvg} />
 				</div>
@@ -21,7 +22,7 @@ const Navbar: React.FC = () => {
 						content={<ShoppingCartSimple size={22} weight="fill" />}
 					/>
 				</div>
-			</div>
+			</BaseContentWrapper>
 		</div>
 	)
 }
