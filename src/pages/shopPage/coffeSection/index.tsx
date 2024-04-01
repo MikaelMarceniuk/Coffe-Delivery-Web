@@ -8,7 +8,7 @@ const CoffeSection: React.FC = () => {
 			<BaseContentWrapper>
 				<h2 className='pb-8 font-baloo2 font-extrabold text-3xl text-baseSubtitle'>Nossos cafés</h2>
 				<ul className='flex flex-wrap gap-8'>
-					{CoffesData.map((coffe, i) => <CoffeListItem key={i} {...coffe} />)}
+					{CoffesData.map((coffe) => <CoffeListItem key={coffe.id} {...coffe} />)}
 				</ul>
 			</BaseContentWrapper>
 		</section>

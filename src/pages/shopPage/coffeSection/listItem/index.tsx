@@ -25,8 +25,9 @@ const CoffeListItem: React.FC<ICoffe> = (coffe) => {
 			/>
 
 			<ul className='w-full pb-4 flex items-center justify-center gap-x-1'>
-				{coffe.categories.map(category => (
+				{coffe.categories.map((category, i) => (
 					<li
+						key={i}
 						className='w-fit pl-2 pr-2 pt-1 pb-1 rounded-full bg-yellowLight font-bold text-badge text-yellowDark uppercase'
 					>
 						{category}
@@ -59,6 +60,7 @@ const CoffeListItem: React.FC<ICoffe> = (coffe) => {
 							min={1}
 							max={99}
 							value={coffeQtd}
+							readOnly
 						/>
 						<Plus
 							size={16}
