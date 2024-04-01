@@ -6,7 +6,7 @@ const CartButton: React.FC<React.ButtonHTMLAttributes<HTMLButtonElement>> = ({ .
 
 	return (
 		<button
-			className='w-fit h-10 p-2 relative flex items-center justify-center gap-1 rounded-md bg-yellowLight text-yellowDark font-roboto text-sm'
+			className='w-fit h-10 p-2 relative flex items-center justify-center gap-1 rounded-md bg-yellowLight hover:bg-yellowDark text-yellowDark hover:text-white font-roboto text-sm transition-all'
 			{...btnProps}
 		>
 			<ShoppingCartSimple size={22} weight="fill" />
