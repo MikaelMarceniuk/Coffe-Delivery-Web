@@ -71,7 +71,7 @@ const CoffeListItem: React.FC<ICoffe> = (coffe) => {
 					</div>
 
 					<Button
-						variant='buy'
+						variant='buyCoffe'
 						content={<ShoppingCartSimple size={20} weight="fill" />}
 						className='h-[38px]'
 						onClick={addCoffeToCard}

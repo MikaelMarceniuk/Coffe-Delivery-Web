@@ -1,7 +1,8 @@
-import { MapPin, ShoppingCartSimple } from '@phosphor-icons/react'
+import { MapPin } from '@phosphor-icons/react'
 import logoSvg from '../assets/Logo.svg'
 import Button from './ui/button'
 import BaseContentWrapper from './ui/baseContentWrapper'
+import CartButton from './cartButton'
 
 const Navbar: React.FC = () => {
 	return (
@@ -17,10 +18,7 @@ const Navbar: React.FC = () => {
 						leftIcon={<MapPin size={22} weight="fill" />}
 						content='Ribeirao Preto, SP'
 					/>
-					<Button
-						variant='yellowLight'
-						content={<ShoppingCartSimple size={22} weight="fill" />}
-					/>
+					<CartButton />
 				</div>
 			</BaseContentWrapper>
 		</div>
