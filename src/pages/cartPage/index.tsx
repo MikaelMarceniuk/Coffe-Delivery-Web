@@ -1,11 +1,11 @@
-import BaseContentWrapper from "../../components/ui/baseContentWrapper"
+import Navbar from "../../components/navbar"
+import PageWrapper from "../../components/ui/pageWrapper"
 
 const CartPage: React.FC = () => {
 	return (
-		<div>
-			<BaseContentWrapper>
-			</BaseContentWrapper>
-		</div>
+		<PageWrapper>
+			<Navbar />
+		</PageWrapper>
 	)
 }
 

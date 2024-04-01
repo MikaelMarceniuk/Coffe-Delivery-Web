@@ -3,14 +3,19 @@ import logoSvg from '../assets/Logo.svg'
 import Button from './ui/button'
 import BaseContentWrapper from './ui/baseContentWrapper'
 import CartButton from './cartButton'
+import { Link, useNavigate } from 'react-router-dom'
 
 const Navbar: React.FC = () => {
+	const navigate = useNavigate()
+
+	const goToCartPage = () => navigate('/cart')
+
 	return (
 		<div className='h-28 flex items-center'>
 			<BaseContentWrapper className='flex flex-1 items-center justify-between'>
-				<div>
+				<Link to='/'>
 					<img src={logoSvg} />
-				</div>
+				</Link>
 
 				<div className='flex items-center gap-3'>
 					<Button
@@ -18,7 +23,7 @@ const Navbar: React.FC = () => {
 						leftIcon={<MapPin size={22} weight="fill" />}
 						content='Ribeirao Preto, SP'
 					/>
-					<CartButton />
+					<CartButton onClick={goToCartPage} />
 				</div>
 			</BaseContentWrapper>
 		</div>
