@@ -1,5 +1,5 @@
 import { Bank, CreditCard, CurrencyDollar, Money } from "@phosphor-icons/react"
-import WayOfPaymentButton from "./wayOfPaymentButton"
+import WayOfPaymentButton from "./components/wayOfPaymentButton"
 import * as RadioGroup from '@radix-ui/react-radio-group';
 
 const PaymentCard = () => {

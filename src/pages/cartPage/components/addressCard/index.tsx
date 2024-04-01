@@ -1,5 +1,5 @@
 import { MapPinLine } from "@phosphor-icons/react"
-import Input from "./input"
+import Input from "./components/input"
 
 const AdressCard = () => {
 	return (
