@@ -6,9 +6,10 @@ interface IButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
 }
 
 const variants = {
-	yellowLight: 'bg-yellowLight hover:bg-yellowDark text-yellowDark hover:text-white transition-all',
+	yellow: 'bg-yellow hover:bg-yellowDark font-bold text-white hover:text-white uppercase transition-all',
 	purple: 'bg-purpleLight hover:bg-purpleDark text-purpleDark hover:text-white transition-all',
-	buyCoffe: 'bg-purpleDark hover:bg-purple text-white transition-all'
+	buyCoffe: 'bg-purpleDark hover:bg-purple text-white transition-all',
+	removeCoffe: 'bg-baseButton text-baseText text-xs uppercase'
 }
 
 const Button: React.FC<IButtonProps> = ({ variant, className = '', leftIcon, rightIcon, content, ...btnProps }) => {

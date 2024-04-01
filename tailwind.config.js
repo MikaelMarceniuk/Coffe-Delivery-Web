@@ -33,6 +33,7 @@ export default {
       },
       borderRadius: {
         card36px: '36px',
+        card44px: '44px',
       },
       fontSize: {
         badge: '0.625rem' //10px

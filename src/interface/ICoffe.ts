@@ -3,7 +3,7 @@ interface ICoffe {
 	name: string
 	categories: string[]
 	description: string
-	price: string
+	price: number
 	img: string
 }
 

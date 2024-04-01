@@ -40,7 +40,7 @@ const CoffeListItem: React.FC<ICoffe> = (coffe) => {
 			<div className='px-6 flex w-full items-center justify-between'>
 				<div>
 					<span className='text-baseText text-sm'>R$ </span>
-					<span className='font-extrabold text-baseText text-2xl'>{coffe.price}</span>
+					<span className='font-extrabold text-baseText text-2xl'>{coffe.price.toFixed(2)}</span>
 				</div>
 
 				<div className='flex gap-2'>

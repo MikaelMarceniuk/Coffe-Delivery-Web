@@ -21,7 +21,7 @@ const CoffesData: ICoffe[] = [
 		name: 'Expresso Tradicional',
 		categories: ['Tradicional'],
 		description: 'O tradicional café feito com água quente e grãos moídos',
-		price: '9,90',
+		price: 9.90,
 		img: ExpressoTradicionalImg
 	},
 	{
@@ -29,7 +29,7 @@ const CoffesData: ICoffe[] = [
 		name: 'Expresso Americano',
 		categories: ['Tradicional'],
 		description: 'Expresso diluído, menos intenso que o tradicional',
-		price: '9,90', 
+		price: 9.90, 
 		img: ExpressoAmericano
 	},
 	{
@@ -37,7 +37,7 @@ const CoffesData: ICoffe[] = [
 		name: 'Expresso Cremoso',
 		categories: ['Tradicional'],
 		description: 'Café expresso tradicional com espuma cremosa',
-		price: '9,90', 
+		price: 9.90, 
 		img: ExpressoCremoso
 	},
 	{
@@ -45,7 +45,7 @@ const CoffesData: ICoffe[] = [
 		name: 'Expresso Gelado',
 		categories: ['Tradicional'],
 		description: 'Bebida preparada com café expresso e cubos de gelo',
-		price: '9,90', 
+		price: 9.90, 
 		img: ExpressoGelado
 	},
 	{
@@ -53,7 +53,7 @@ const CoffesData: ICoffe[] = [
 		name: 'Café com Leite',
 		categories: ['Tradicional', 'Com leite'],
 		description: 'Meio a meio de expresso tradicional com leite vaporizado',
-		price: '9,90', 
+		price: 9.90, 
 		img: CafeComLeite
 	},
 	{
@@ -61,7 +61,7 @@ const CoffesData: ICoffe[] = [
 		name: 'Latte',
 		categories: ['Tradicional', 'Com leite'],
 		description: 'Uma dose de café expresso com o dobro de leite e espuma cremosa',
-		price: '9,90', 
+		price: 9.90, 
 		img: Latte
 	},
 	{
@@ -69,7 +69,7 @@ const CoffesData: ICoffe[] = [
 		name: 'Capuccino',
 		categories: ['Tradicional', 'Com leite'],
 		description: 'Bebida com canela feita de doses iguais de café, leite e espuma',
-		price: '9,90', 
+		price: 9.90, 
 		img: Capuccino
 	},
 	{
@@ -77,7 +77,7 @@ const CoffesData: ICoffe[] = [
 		name: 'Macchiato',
 		categories: ['Tradicional', 'Com leite'],
 		description: 'Café expresso misturado com um pouco de leite quente e espuma',
-		price: '9,90', 
+		price: 9.90, 
 		img: Macchiato
 	},
 	{
@@ -85,7 +85,7 @@ const CoffesData: ICoffe[] = [
 		name: 'Mocaccino',
 		categories: ['Tradicional', 'Com leite'],
 		description: 'Café expresso com calda de chocolate, pouco leite e espuma',
-		price: '9,90', 
+		price: 9.90, 
 		img: Moccacino
 	},
 	{
@@ -93,7 +93,7 @@ const CoffesData: ICoffe[] = [
 		name: 'Chocolate Quente',
 		categories: ['Tradicional', 'Com leite'],
 		description: 'Bebida feita com chocolate dissolvido no leite quente e café',
-		price: '9,90', 
+		price: 9.90, 
 		img: ChocolateQuente
 	},
 	{
@@ -101,7 +101,7 @@ const CoffesData: ICoffe[] = [
 		name: 'Cubano',
 		categories: ['Tradicional', 'Com leite', 'Alcoólico'],
 		description: 'Drink gelado de café expresso com rum, creme de leite e hortelã',
-		price: '9,90', 
+		price: 9.90, 
 		img: Cubano
 	},
 	{
@@ -109,7 +109,7 @@ const CoffesData: ICoffe[] = [
 		name: 'Havaiano',
 		categories: ['Especial'],
 		description: 'Bebida adocicada preparada com café e leite de coco',
-		price: '9,90', 
+		price: 9.90, 
 		img: Havaiano
 	},
 	{
@@ -117,7 +117,7 @@ const CoffesData: ICoffe[] = [
 		name: 'Árabe',
 		categories: ['Especial'],
 		description: 'Bebida preparada com grãos de café árabe e especiarias',
-		price: '9,90', 
+		price: 9.90, 
 		img: Arabe
 	},
 	{
@@ -125,7 +125,7 @@ const CoffesData: ICoffe[] = [
 		name: 'Irlandês',
 		categories: ['Especial', 'Alcoólico'],
 		description: 'Bebida a base de café, uísque irlandês, açúcar e chantilly',
-		price: '9,90', 
+		price: 9.90, 
 		img: Irlandes
 	}
 ]

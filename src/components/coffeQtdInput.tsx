@@ -12,7 +12,7 @@ const CoffeQtdInput: React.FC<ICoffeQtdInputProps> = ({
 	coffeQtdValue
 }) => {
 	return (
-		<div className='px-1 flex items-center gap-1 bg-baseButton rounded-md'>
+		<div className='px-2 flex items-center gap-1 bg-baseButton rounded-md'>
 			<Minus
 				size={16}
 				weight='bold'
