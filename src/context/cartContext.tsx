@@ -1,7 +1,8 @@
-import { createContext, useContext, useReducer } from "react";
+import { createContext, useContext, useEffect, useReducer } from "react";
 import ICoffeCart from "../interface/ICoffeCart";
 import CartReducer from "../reducers/cart/reducer";
 import { removeProductAction, updateCartAction } from "../reducers/cart/actions";
+import { toast } from "react-toastify";
 
 export interface ICartContext {
 	values: ICoffeCart[]
@@ -20,7 +21,16 @@ interface ICartContextProviderProps {
 const CartContextProvider: React.FC<ICartContextProviderProps> = ({ children }) => {
 	const [cart, dispatch] = useReducer(CartReducer, [])
 
-	const updateCart = (coffe: ICoffeCart) => dispatch(updateCartAction(coffe))
+	const updateCart = (coffe: ICoffeCart) => {
+		dispatch(updateCartAction(coffe))
+		toast.success(
+			`Cafe "${coffe.name}" adicionado ao carrinho.`,
+			{
+				autoClose: 2000,
+				theme: 'colored'
+			}
+		)
+	}
 
 	const removeProduct = (id: number) => dispatch(removeProductAction(id))
 
