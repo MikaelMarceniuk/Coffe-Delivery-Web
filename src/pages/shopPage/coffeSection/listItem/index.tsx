@@ -2,13 +2,17 @@ import { useState } from "react"
 import { Minus, Plus, ShoppingCartSimple } from "@phosphor-icons/react"
 import ICoffe from "../../../../interface/ICoffe"
 import Button from "../../../../components/ui/button"
+import { useCartContext } from "../../../../context/cartContext"
 
 const CoffeListItem: React.FC<ICoffe> = (coffe) => {
 	const [coffeQtd, setCoffeQtd] = useState(1)
+	const { updateCart } = useCartContext()
 
 	const incrementCoffeQtd = () => setCoffeQtd(state => state + 1)
 
 	const decreaseCoffeQtd = () => setCoffeQtd(state => state - 1)
+
+	const addCoffeToCard = () => updateCart({ ...coffe, qtd: coffeQtd })
 
 	return (
 		<div
@@ -68,6 +72,7 @@ const CoffeListItem: React.FC<ICoffe> = (coffe) => {
 						variant='buy'
 						content={<ShoppingCartSimple size={20} weight="fill" />}
 						className='h-[38px]'
+						onClick={addCoffeToCard}
 					/>
 				</div>
 			</div>
