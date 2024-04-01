@@ -1,16 +1,13 @@
 import { useState } from "react"
-import { Minus, Plus, ShoppingCartSimple } from "@phosphor-icons/react"
+import { ShoppingCartSimple } from "@phosphor-icons/react"
 import ICoffe from "../../../../interface/ICoffe"
 import Button from "../../../../components/ui/button"
 import { useCartContext } from "../../../../context/cartContext"
+import CoffeQtdInput from "../../../../components/coffeQtdInput"
 
 const CoffeListItem: React.FC<ICoffe> = (coffe) => {
 	const [coffeQtd, setCoffeQtd] = useState(1)
 	const { updateCart } = useCartContext()
-
-	const incrementCoffeQtd = () => setCoffeQtd(state => state + 1)
-
-	const decreaseCoffeQtd = () => setCoffeQtd(state => state - 1)
 
 	const addCoffeToCard = () => updateCart({ ...coffe, qtd: coffeQtd })
 
@@ -47,28 +44,11 @@ const CoffeListItem: React.FC<ICoffe> = (coffe) => {
 				</div>
 
 				<div className='flex gap-2'>
-					<div className='px-1 flex items-center gap-1 bg-baseButton rounded-md'>
-						<Minus
-							size={16}
-							weight='bold'
-							className='text-purple cursor-pointer'
-							onClick={decreaseCoffeQtd}
-						/>
-						<input
-							className='w-6 pl-1 bg-transparent text-baseTitle'
-							type="number"
-							min={1}
-							max={99}
-							value={coffeQtd}
-							readOnly
-						/>
-						<Plus
-							size={16}
-							weight='bold'
-							className='text-purple cursor-pointer'
-							onClick={incrementCoffeQtd}
-						/>
-					</div>
+					<CoffeQtdInput
+						handleIncrementCoffeQtd={() => setCoffeQtd(state => state + 1)}
+						handleDecreaseCoffeQtd={() => setCoffeQtd(state => state - 1)}
+						coffeQtdValue={coffeQtd}
+					/>
 
 					<Button
 						variant='buyCoffe'
