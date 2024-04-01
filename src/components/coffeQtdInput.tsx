@@ -16,7 +16,7 @@ const CoffeQtdInput: React.FC<ICoffeQtdInputProps> = ({
 			<Minus
 				size={16}
 				weight='bold'
-				className='text-purple cursor-pointer'
+				className='text-purple cursor-pointer hover:text-purpleDark transition-all'
 				onClick={handleDecreaseCoffeQtd}
 			/>
 			<input
@@ -30,7 +30,7 @@ const CoffeQtdInput: React.FC<ICoffeQtdInputProps> = ({
 			<Plus
 				size={16}
 				weight='bold'
-				className='text-purple cursor-pointer'
+				className='text-purple cursor-pointer hover:text-purpleDark transition-all'
 				onClick={handleIncrementCoffeQtd}
 			/>
 		</div>
