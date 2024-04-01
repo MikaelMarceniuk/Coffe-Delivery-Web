@@ -1,17 +1,20 @@
+import { produce } from "immer"
 import ICoffeCart from "../../interface/ICoffeCart"
 import { ActionTypes } from "./actions"
 
 const CartReducer = (state: ICoffeCart[], action: any) => {
 	if(action.type == ActionTypes.UPDATE_CART) {
-		const newState = [...state]
-		const productInCartIndex = newState.findIndex(p => p.id == action.payload.product.id)
+		const productInCartIndex = state.findIndex(p => p.id == action.payload.product.id)
+
 		if(productInCartIndex == -1) {
-			newState.push(action.payload.product)
-			return newState
+			return produce(state, draft => {
+				draft.push(action.payload.product)
+			})
 		}
 
-		newState[productInCartIndex] = action.payload.product
-		return newState
+		return produce(state, draft => {
+			draft[productInCartIndex].qtd += action.payload.product.qtd
+		})
 	}
 
 	if(action.type == ActionTypes.REMOVE_PRODUCT) {
