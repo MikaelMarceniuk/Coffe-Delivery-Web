@@ -11,7 +11,7 @@ const Input: React.FC<IInputProps> = ({ isOptional = false, inputProps, containe
 			{...containerProps}
 		>
 			<input
-				className='p-3 flex-1 bg-transparent placeholder:text-baseLabel text-baseText text-sm'
+				className='w-full p-3 flex-1 bg-transparent placeholder:text-baseLabel text-baseText text-sm'
 				{...inputProps}
 			/>
 			

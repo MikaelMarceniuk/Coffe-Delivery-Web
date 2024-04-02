@@ -18,6 +18,7 @@ const SelectedCoffesCard = () => {
 				className='w-full mt-6 uppercase'
 				variant='yellow'
 				content='Confirmar pedido'
+				type='submit'
 			/>
 		</div>
 	)

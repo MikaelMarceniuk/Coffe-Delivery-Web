@@ -1,8 +1,13 @@
-import { Bank, CreditCard, CurrencyDollar, Money } from "@phosphor-icons/react"
+import { CurrencyDollar } from "@phosphor-icons/react"
 import WayOfPaymentButton from "./components/wayOfPaymentButton"
 import * as RadioGroup from '@radix-ui/react-radio-group';
+import PaymentOptions from "../../../../data/paymentOptions";
+import { Controller, useFormContext } from "react-hook-form";
+import { CheckoutFormSchemaType } from "../..";
 
 const PaymentCard = () => {
+	const { control } = useFormContext<CheckoutFormSchemaType>()
+
 	return (
 		<div className='p-10 bg-baseCard rounded-md '>
 			<div className='flex flex-col gap-8'>
@@ -15,23 +20,23 @@ const PaymentCard = () => {
 						<span className='text-baseText text-sm'>O pagamento é feito na entrega. Escolha a forma que deseja pagar</span>
 					</div>
 				</div>
-				<RadioGroup.Root className='flex gap-3'>
-					<WayOfPaymentButton
-						value='Cartão de crédito'
-						text="Cartão de crédito"
-						icon={<CreditCard size={16} />}
-					/>
-					<WayOfPaymentButton
-						value='Cartão de débito'
-						text="Cartão de débito"
-						icon={<Bank size={16} />}
-					/>
-					<WayOfPaymentButton
-						value='Dinheiro'
-						text="Dinheiro"
-						icon={<Money size={16} />}
-					/>
-				</RadioGroup.Root>
+				<Controller
+					control={control}
+					name='wayOfPayment'
+					render={({ field }) => {
+						console.log('field: ', field)
+
+						return (
+							<RadioGroup.Root
+								className='flex gap-3'
+								onValueChange={field.onChange}
+								value={field.value || null}
+							>
+								{PaymentOptions.map(paymentOption => <WayOfPaymentButton key={paymentOption.id} {...paymentOption} />)}
+							</RadioGroup.Root>
+						)
+					}}
+				/>
 			</div>
 		</div>
 	)
