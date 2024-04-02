@@ -11,9 +11,9 @@ const CoffeCardItem: React.FC<ICoffeCart> = (coffe) => {
 
 	return (
 		<li
-			className='p-5 flex justify-between border-b border-baseButton'
+			className='p-5 flex justify-between gap-5 border-b border-baseButton'
 		>
-			<div className='max-w-16 max-h-16 self-center'>
+			<div className='w-16 h-16 self-center'>
 				<img src={coffe.img} />
 			</div>
 
