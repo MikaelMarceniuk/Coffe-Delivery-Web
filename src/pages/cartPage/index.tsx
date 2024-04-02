@@ -12,15 +12,15 @@ import { toast } from "react-toastify"
 import { useEffect } from "react"
 
 const checkoutFormSchema = z.object({
-	zipCode: z.string(),
-	address: z.string(),
-	number: z.number(),
+	zipCode: z.string().min(1),
+	address: z.string().min(1),
+	number: z.number().min(1),
 	complement: z.string().optional(),
-	neighborhood: z.string(),
-	city: z.string(),
-	state: z.string(),
+	neighborhood: z.string().min(1),
+	city: z.string().min(1),
+	state: z.string().min(1),
 	wayOfPayment: z.enum(['CARTAO_CREDITO', 'CARTAO_DEBITO', 'DINHEIRO'])
-})
+}).required()
 
 export type CheckoutFormSchemaType = z.infer<typeof checkoutFormSchema>
 
@@ -32,13 +32,24 @@ const CartPage: React.FC = () => {
 
 	const {
 		handleSubmit,
-		formState : { isSubmitSuccessful }
+		formState : { isSubmitSuccessful, errors }
 	} = hookForm
 
 	useEffect(() => {
 		if(isSubmitSuccessful)
 			hookForm.reset()
 	}, [hookForm, isSubmitSuccessful])
+
+	useEffect(() => {
+		if(errors['wayOfPayment']) {
+			toast.error(
+				'Método de pagamento obrigatório.',
+				{
+					theme: 'colored'
+				}
+			)
+		}
+	}, [errors])
 
 	const handleOnSubmit = (data: CheckoutFormSchemaType) => {
 		if(values.length == 0) {

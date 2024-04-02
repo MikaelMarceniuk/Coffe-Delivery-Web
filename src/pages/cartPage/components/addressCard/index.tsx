@@ -19,7 +19,6 @@ const AdressCard = () => {
 			</div>
 			<div className='mt-8 flex flex-col gap-4'>
 				<Input
-					
 					containerProps={{
 						style: { width: '200px' }
 					}}

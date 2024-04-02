@@ -23,19 +23,15 @@ const PaymentCard = () => {
 				<Controller
 					control={control}
 					name='wayOfPayment'
-					render={({ field }) => {
-						console.log('field: ', field)
-
-						return (
-							<RadioGroup.Root
-								className='flex gap-3'
-								onValueChange={field.onChange}
-								value={field.value || null}
-							>
-								{PaymentOptions.map(paymentOption => <WayOfPaymentButton key={paymentOption.id} {...paymentOption} />)}
-							</RadioGroup.Root>
-						)
-					}}
+					render={({ field }) => (
+						<RadioGroup.Root
+							className='flex gap-3'
+							onValueChange={field.onChange}
+							value={field.value || null}
+						>
+							{PaymentOptions.map(paymentOption => <WayOfPaymentButton key={paymentOption.id} {...paymentOption} />)}
+						</RadioGroup.Root>
+					)}
 				/>
 			</div>
 		</div>
